@@ -1,0 +1,26 @@
+.bg-darkblue {
+    background-color: var(--color-primary);
+}
+
+.bg-yellow {
+    background-color: var(--color-secondary);
+}
+
+.text-darkblue {
+    color: var(--color-primary);
+}
+
+.text-yellow {
+    color: var(--color-secondary);
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.sticky-top--custom {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
