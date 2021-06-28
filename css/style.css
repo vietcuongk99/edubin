@@ -23,7 +23,9 @@ body {
 }
 
 #btnToggleDropDown {
-    font-size: calc(2 * var(--font-size));
+    font-size: calc(1.5 * var(--font-size));
+    padding: 0;
+    margin: 1.5rem;
 }
 
 #socialLink a {
@@ -37,6 +39,7 @@ body {
 
 #accountLink a {
     color: var(--color-secondary);
+    font-size: 14px;
 }
 
 #accountLink a:hover {
@@ -53,10 +56,25 @@ body {
     transition-duration: var(--transition-duration-time);
 }
 
-div.thumbnail-image {
-    background-image: linear-gradient(#07294d5b, rgba(0, 0, 0, 0.5)), url("http://127.0.0.1:5501/content/image_icon/thumbnail.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    background-position: center;
+#secondNav img {
+    width: auto;
+    height: 3rem;
+}
+
+@media only screen and (max-width: 350px) {
+    #secondNav img {
+        width: auto;
+        height: 1.5rem;
+    }
+    #btnToggleDropDown {
+        font-size: var(--font-size);
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    #socialLink,
+    #accountLink a {
+        font-size: 0.75rem;
+    }
 }

@@ -4,16 +4,18 @@ let collapseDropdown = document.getElementById('collapseDropdown'),
     sticky = secondNav.offsetTop;
 
 function initEvent() {
-    window.onscroll = () => {
-        if (window.pageYOffset >= sticky) {
-            secondNav.classList.add("sticky-top--custom")
-        } else {
-            secondNav.classList.remove("sticky-top--custom");
-        }
-    };
+    window.addEventListener("scroll", onScroll);
     btnToggleDropDown.addEventListener('click', () => {
         collapseDropdown.classList.toggle('d-none');
     });
+}
+
+function onScroll() {
+    if (window.pageYOffset >= sticky) {
+        secondNav.classList.add("sticky-top--custom");
+    } else {
+        secondNav.classList.remove("sticky-top--custom");
+    }
 }
 
 initEvent();

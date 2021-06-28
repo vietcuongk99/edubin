@@ -14,10 +14,6 @@
     color: var(--color-secondary);
 }
 
-.font-14 {
-    font-size: 14px;
-}
-
 .sticky-top--custom {
     position: fixed;
     top: 0;
