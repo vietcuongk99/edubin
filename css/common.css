@@ -6,6 +6,30 @@
     background-color: var(--color-secondary);
 }
 
+.bg-lightpink {
+    background-color: #FF6F6F;
+}
+
+.bg-pink {
+    background-color: #f6316f;
+}
+
+.bg-green {
+    background-color: #009688;
+}
+
+.bg-green {
+    background-color: #009688;
+}
+
+.bg-yellowgreen {
+    background-color: #B5D56A;
+}
+
+.bg-lightblue {
+    background-color: #4886FF;
+}
+
 .text-darkblue {
     color: var(--color-primary);
 }

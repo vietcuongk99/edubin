@@ -26,11 +26,7 @@
 }
 
 .carousel__image--second {
-    background-image: url("../content/image_icon/news_image_2.jpg");
-}
-
-.carousel__image--third {
-    background-image: url("../content/image_icon/news_image_3.jpeg");
+    background-image: url("../content/image_icon/thumbnail2.jpg");
 }
 
 .carousel-item.carousel__image {
@@ -78,19 +74,65 @@
     transition-duration: var(--transition-duration-time);
 }
 
-@media only screen and (max-width: 768px) {
-    .carousel-item__content {
-        top: 10%;
-    }
+.slider__item--custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media only screen and (max-width: 576px) {
+.slider__content--custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 10rem;
+    height: 10rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.slider__content--custom img {
+    width: 6rem;
+    height: 6rem;
+}
+
+#platformSectionTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+
+#platformSectionWrapper {
+    transform: translateY(-50%);
+    padding: 4rem;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    #platformSectionTitle {
+        font-size: 2rem;
+        font-weight: 600;
+    }
     .carousel-item__content {
         top: 5%;
     }
+    #platformSectionWrapper {
+        padding: 2rem;
+    }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
+    #platformSectionTitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    #platformSectionWrapper {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
     .carousel-item__content p:first-child {
         font-size: 1.5rem;
     }
@@ -100,5 +142,13 @@
     .carousel-item__btn {
         font-size: 0.75rem;
         padding: 0.5rem 1rem;
+    }
+    .slider__content--custom {
+        width: 8rem;
+        height: 8rem;
+    }
+    .slider__content--custom img {
+        width: 4rem;
+        height: 4rem;
     }
 }
