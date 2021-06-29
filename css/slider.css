@@ -1,18 +1,6 @@
-#firstCarousel .carousel-control-prev,
-#firstCarousel .carousel-control-next {
+#fullWidthCarousel .carousel-control-prev,
+#fullWidthCarousel .carousel-control-next {
     z-index: 100;
-}
-
-.carousel-item__overlay {
-    background: linear-gradient(#07294d5b, rgba(0, 0, 0, 0.5));
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
 }
 
 .carousel__image {
@@ -36,7 +24,7 @@
 
 .carousel-item__content {
     position: absolute;
-    z-index: 10;
+    /* z-index: 10; */
     color: white;
     display: flex;
     flex-direction: column;
@@ -49,29 +37,6 @@
 
 .carousel-item__content p:last-child {
     font-size: 1.25rem;
-}
-
-.carousel-item__btn {
-    font-family: "Montserrat", Sans-serif;
-    font-weight: 600;
-    text-transform: capitalize;
-    margin-right: 1rem;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-}
-
-.carousel-item__btn--first:hover {
-    background-color: var(--color-primary);
-    color: white;
-    transition-duration: var(--transition-duration-time);
-}
-
-.carousel-item__btn--second:hover {
-    background-color: var(--color-primary);
-    color: white;
-    transition-duration: var(--transition-duration-time);
 }
 
 .slider__item--custom {
@@ -96,38 +61,38 @@
     height: 6rem;
 }
 
-#platformSectionTitle {
+#optionSectionTitle {
     font-size: 2.5rem;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
 }
 
-#platformSectionWrapper {
+#optionSectionWrapper {
     transform: translateY(-50%);
     padding: 4rem;
     border-radius: 10px;
 }
 
 @media only screen and (max-width: 992px) {
-    #platformSectionTitle {
+    #optionSectionTitle {
         font-size: 2rem;
         font-weight: 600;
     }
     .carousel-item__content {
         top: 5%;
     }
-    #platformSectionWrapper {
+    #optionSectionWrapper {
         padding: 2rem;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    #platformSectionTitle {
+    #optionSectionTitle {
         font-size: 1.5rem;
         font-weight: 600;
     }
-    #platformSectionWrapper {
+    #optionSectionWrapper {
         padding: 2rem;
     }
 }
@@ -139,7 +104,7 @@
     .carousel-item__content p:last-child {
         font-size: 1rem;
     }
-    .carousel-item__btn {
+    .btn--custom {
         font-size: 0.75rem;
         padding: 0.5rem 1rem;
     }

@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edubin</title>
     <!-- custom css -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/dropdown.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/carousel.css">
-    <!-- font awesome -->
+    <link rel="stylesheet" href="../css/slider.css">
+    <!-- fontawesome -->
     <link rel="stylesheet" href="../lib/fontawesome-free-5.15.3-web/css/all.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="../lib/bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
@@ -26,16 +26,16 @@
 </head>
 
 <body>
-    <!-- top navigator -->
+    <!-- top section -->
     <header class="sticky-top">
-        <!-- first nav -->
-        <div id="firstNav" class="container-fluid">
+        <!-- top bar -->
+        <div id="topBar" class="container-fluid">
             <div class="container-xl d-flex justify-content-center justify-content-md-between align-items-center p-1">
                 <div class=" d-none d-md-flex justify-content-center align-items-center">
                     <i class="far fa-envelope p-1"></i>
                     <a id="mailLink" href="#" class="mr-2 text-decoration-none">info@yoursite.com</a>
                     <i class="fas fa-phone-alt p-1"></i>
-                    <span>123-456-789-0</span>
+                    <span>123-456-7890</span>
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="p-2 d-none d-md-block">
@@ -70,9 +70,9 @@
                 </div>
             </div>
         </div>
-        <!-- second nav -->
-        <div id="secondNav">
-            <div class="container-fluid d-flex bg-white">
+        <!-- main navigator bar -->
+        <div id="mainNav">
+            <div class="container-fluid d-flex bg-white shadow">
                 <div class="container-fluid container-xl px-0">
                     <nav class="navbar bg-white navbar-expand-lg px-1 justify-content-between">
                         <a class="navbar-brand" href="#">
@@ -80,7 +80,7 @@
                         </a>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="d-none d-lg-block m-3">
-                                <div id="navBarNav" class="d-flex">
+                                <div id="mainNavContent" class="d-flex">
                                     <div class="dropdown--custom">
                                         <div class="d-flex align-items-center">
                                             <span>Home</span><i class="fas fa-chevron-down"></i>
@@ -135,15 +135,11 @@
                                     <div>
                                         <div class="d-flex align-items-center">
                                             <span>Contact</span>
-                                            <!-- <i class="fas fa-chevron-down"></i> -->
                                         </div>
-                                        <!-- <div class="dropdown__content dropdown__content--lg">
-                                            <div>All home demos</div>
-                                        </div> -->
                                     </div>
                                 </div>
                             </div>
-                            <button id="btnToggleDropDown" class="navbar-toggler d-lg-none border-0 bg-darkblue" type="button">
+                            <button id="btnToggleDropDown" class="navbar-toggler d-lg-none border-0" type="button">
                                 <i class="fas fa-bars text-darkblue"></i>
                             </button>
                             <i class="fas fa-search m-1"></i>
@@ -152,7 +148,7 @@
                     </nav>
                 </div>
             </div>
-            <!-- dropdown for small screen -->
+            <!-- dropdown for mobile screen -->
             <div id="collapseDropdown" class="d-none d-lg-none dropdown--custom">
                 <div class="container-fluid dropdown__content">
                     <div class="p-2">
@@ -189,12 +185,13 @@
         </div>
     </header>
 
-    <!-- main content -->
+    <!-- main section -->
     <main>
-        <div id="firstCarousel" class="carousel slide" data-slide="carousel">
+        <!-- full width slider section -->
+        <div id="fullWidthCarousel" class="carousel slide" data-slide="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item carousel__image carousel__image--first active">
-                    <div class="carousel-item__overlay"></div>
+                    <div class="overlay darkblue__overlay"></div>
                     <div class="carousel-item__content container-fluid">
                         <div class="container px-0">
                             <div class="d-flex flex-column align-items-start">
@@ -202,8 +199,8 @@
                                 <p class="w-50">Some representative placeholder content for the second slide.</p>
                             </div>
                             <div class="d-flex">
-                                <button class="carousel-item__btn carousel-item__btn--first bg-yellow text-darkblue">Apply now</button>
-                                <button class="carousel-item__btn carousel-item__btn--second text-darkblue">learn more</button>
+                                <button class="btn--custom btn-orange mr-3">Apply now</button>
+                                <button class="btn--custom btn-white--custom">learn more</button>
                             </div>
                         </div>
                     </div>
@@ -217,33 +214,34 @@
                                 <p class="w-50">Lorem dummy text of the printing and typesetting industry lorem ipsum has been the industry's standard dummy text.</p>
                             </div>
                             <div class="d-flex">
-                                <button class="carousel-item__btn carousel-item__btn--first bg-yellow text-darkblue">Apply now</button>
-                                <button class="carousel-item__btn carousel-item__btn--second text-darkblue">learn more</button>
+                                <button class="btn--custom btn-orange mr-3">Apply now</button>
+                                <button class="btn--custom btn-white--custom">learn more</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-control-prev">
-                <a href="#firstCarousel" role="button" data-slide="prev" class="p-2">
+                <a href="#fullWidthCarousel" role="button" data-slide="prev" class="p-2">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </a>
                 <span class="sr-only">Previous</span>
             </div>
             <div class="carousel-control-next">
-                <a href="#firstCarousel" role="button" data-slide="next" class="p-2">
+                <a href="#fullWidthCarousel" role="button" data-slide="next" class="p-2">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </a>
                 <span class="sr-only">Next</span>
             </div>
         </div>
-        <div id="platformSection" class="container-fluid text-white">
+        <!-- option section -->
+        <div id="optionSection" class="container-fluid my-0 py-0 text-white">
             <div class="container p-0">
-                <div id="platformSectionWrapper" class="row m-0 w-100 bg-darkblue">
-                    <div id="platformSectionTitle" class="col-sm col-lg-4 p-2">
+                <div id="optionSectionWrapper" class="row m-0 w-100 bg-darkblue">
+                    <div id="optionSectionTitle" class="col-sm col-lg-4 p-2">
                         <span>Best plaform to learn everything</span>
                     </div>
-                    <div id="platformSlider" class="col-sm col-lg-7 offset-lg-1 p-2 d-flex align-items-center justify-content-center">
+                    <div id="optionSlider" class="col-sm col-lg-7 offset-lg-1 p-2 d-flex align-items-center justify-content-center">
                         <div>
                             <div class="slider__item--custom">
                                 <div class="slider__content--custom bg-pink">
@@ -288,10 +286,111 @@
                 </div>
             </div>
         </div>
+        <!-- about section -->
+        <div id="aboutSection" class="container-fluid">
+            <div class="container p-0">
+                <div class="row w-100 m-0">
+                    <div class="col-lg">
+                        <div class="mr-5">
+                            <div class="title__wrapper--secondary">
+                                <span>About Us</span>
+                            </div>
+                            <div class="title__wrapper--primary">
+                                <span>Welcome to Edubin</span>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec
+                                    tellus a odio tincidunt mauris. </p><br>
+                                <p>Buci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt mauris</p>
+                                <br>
+                                <p>Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt mauris.</p>
+                            </div>
+                            <div class="pt-3">
+                                <button class="btn--custom btn-orange">Explore More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg">
+                        <div class="title__wrapper--secondary"></div>
+                        <div class="shadow rounded-0 position-relative">
+                            <div class="overlay smoke__overlay"></div>
+                            <div class="d-flex p-5 ml-4 flex-column position-relative">
+                                <div class="my-2 pb-3">
+                                    <div class="d-block text-primary--custom"><span>Upcoming Events</span></div>
+                                    <div class="d-block text-secondary--custom"><span>World University</span></div>
+                                    <div class="d-flex align-items-center my-1">
+                                        <i class="far fa-calendar-alt text-yellow mr-2"></i>
+                                        <span class="text-gray">12:00 AM To 11:59 PM</span>
+                                    </div>
+                                </div>
+                                <div class="my-2 pt-3 border-top">
+                                    <div class="d-flex align-items-center my-1">
+                                        <i class="far fa-clock text-yellow mr-2"></i>
+                                        <span class="text-gray">31.May</span>
+                                    </div>
+                                    <div class="d-block text-secondary--custom"><span>February Education Conferences</span></div>
+                                    <div class="d-flex align-items-center my-1">
+                                        <i class="far fa-calendar-alt text-yellow mr-2"></i>
+                                        <span class="text-gray">12:00 AM To 1:30 AM</span>
+                                    </div>
+                                </div>
+                                <div class="my-2 pt-3 border-top">
+                                    <div class="d-block text-secondary--custom"><span>The Games Education Summit</span></div>
+                                    <div class="d-flex align-items-center my-1">
+                                        <i class="far fa-calendar-alt text-yellow mr-2"></i>
+                                        <span class="text-gray">12:00 AM To 11:59 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- apply information section -->
+        <div class="container-fluid my-5">
+            <div class="container p-0">
+                <div class="row w-100 m-0">
+                    <div class="col-sm bg-darkblue text-white p-5 m-4 m-sm-0">
+                        <div class="d-block text-secondary--custom my-3">Apply for Fall 2021</div>
+                        <div class="d-block my-3">
+                            <p>Gravida nibh vel velit auctor aliquetn sollicitudirem sem quibibendum auci elit cons equat ipsutis sem nibh id elituis sed odio sit amet nibh vulputate cursus equat ipsutis.</p>
+                        </div>
+                        <div class="my-2">
+                            <button class="btn--custom btn-orange">Apply Now</button>
+                        </div>
+                    </div>
+                    <div class="col-sm bg-blue--custom text-white p-5 m-4 m-sm-0">
+                        <div class="d-block text-secondary--custom my-3">Apply for Scholarship</div>
+                        <div class="d-block my-3">
+                            <p>Sollicitudirem sem quibibendum auci elit cons equat ipsutis sem nibh id elituis sed odio sit amet nibh vulputate cursus equat ipsutis gravida nibh vel velit auctor aliquetn.
+                            </p>
+                        </div>
+                        <div class="my-3">
+                            <button class="btn--custom btn-orange">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- courses section -->
+        <div class="container p-5">
+            <div class="d-flex align-items-center justify-content-end">
+                <div id="prevArrow" class="p-2 rounded-0 shadow m-2">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div id="nextArrow" class="p-2 rounded-0 shadow m-2">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+        <div id="coursesList">
+
+        </div>
     </main>
 
-    <!-- <div class="thumbnail-image "></div> -->
-    <!-- footer content -->
+    <!-- footer section -->
     <footer></footer>
 
     <!-- script -->

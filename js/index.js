@@ -1,7 +1,7 @@
 let collapseDropdown = $('#collapseDropdown'),
     btnToggleDropDown = $('#btnToggleDropDown'),
-    secondNav = $('#secondNav'),
-    sticky = secondNav.offset().top;
+    mainNav = $('#mainNav'),
+    sticky = mainNav.offset().top;
 
 $(document).ready(function() {
     initEvent();
@@ -15,15 +15,14 @@ function initEvent() {
 }
 
 function onScroll() {
-    if ($(window).scrollTop() > sticky) {
-        secondNav.addClass("sticky-top--custom");
+    if ($(window).scrollTop() >= sticky) {
+        mainNav.addClass("sticky-top--custom");
     } else {
-        secondNav.removeClass("sticky-top--custom");
+        mainNav.removeClass("sticky-top--custom");
     }
 }
 
-
-$('#platformSlider').slick({
+$('#optionSlider').slick({
     dots: false,
     arrow: true,
     infinite: true,
@@ -63,7 +62,6 @@ $('#platformSlider').slick({
                 infinite: true,
             }
         },
-
         {
             breakpoint: 420,
             settings: {
@@ -72,13 +70,10 @@ $('#platformSlider').slick({
                 infinite: true,
             }
         },
-        // {
-        //     breakpoint: 480,
-        //     settings: {
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1,
-        //         infinite: true,
-        //     }
-        // }
     ]
 });
+
+// $('#coursesSlider').slick({
+//     prevArrow: $('#prevArrow'),
+//     nextArrow: $('#nextArrow'),
+// });

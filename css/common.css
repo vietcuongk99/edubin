@@ -2,6 +2,10 @@
     background-color: var(--color-primary);
 }
 
+.bg-blue--custom {
+    background-color: #092e56;
+}
+
 .bg-yellow {
     background-color: var(--color-secondary);
 }
@@ -18,10 +22,6 @@
     background-color: #009688;
 }
 
-.bg-green {
-    background-color: #009688;
-}
-
 .bg-yellowgreen {
     background-color: #B5D56A;
 }
@@ -30,7 +30,7 @@
     background-color: #4886FF;
 }
 
-.text-darkblue {
+.text-blue {
     color: var(--color-primary);
 }
 
@@ -38,9 +38,58 @@
     color: var(--color-secondary);
 }
 
+.text-gray {
+    color: #b6b6b6;
+}
+
 .sticky-top--custom {
     position: fixed;
     top: 0;
     z-index: 1000;
     width: 100%;
+}
+
+.btn--custom {
+    font-family: "Montserrat", Sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn-orange {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+.btn-white--custom {
+    color: var(--color-primary);
+    background-color: white;
+}
+
+.btn--custom:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transition-duration: var(--transition-duration-time);
+}
+
+.overlay {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+}
+
+.darkblue__overlay {
+    background: linear-gradient(#07294d5b, rgba(0, 0, 0, 0.5));
+}
+
+.smoke__overlay {
+    background-color: rgba(255, 255, 255, .95);
 }

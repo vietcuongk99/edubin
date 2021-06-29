@@ -1,0 +1,174 @@
+:root {
+    --font-size: 16px;
+    --color-primary: #07294d;
+    --color-secondary: #ffc600;
+    --transition-duration-time: 200ms;
+    --font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+#topBar {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+#btnToggleDropDown {
+    font-size: calc(1.5 * var(--font-size));
+    padding: 0;
+    margin: 1.5rem;
+}
+
+#socialLink a {
+    color: #fff;
+}
+
+#socialLink a:hover {
+    color: var(--color-secondary);
+    transition-duration: var(--transition-duration-time);
+}
+
+#accountLink a {
+    color: var(--color-secondary);
+    font-size: 14px;
+}
+
+#accountLink a:hover {
+    color: #fff;
+    transition-duration: var(--transition-duration-time);
+}
+
+#mailLink {
+    color: #fff;
+}
+
+#mailLink:hover {
+    color: var(--color-secondary);
+    transition-duration: var(--transition-duration-time);
+}
+
+#mainNav img {
+    width: auto;
+    height: 3rem;
+}
+
+#aboutSection {
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+#aboutSection div.col-lg:last-child {
+    background-image: url("../content/image_icon/events-bg-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title__wrapper--secondary {
+    height: 3.5rem;
+}
+
+.title__wrapper--secondary span {
+    color: var(--color-primary);
+    margin: 0;
+    padding-bottom: 0.75rem;
+    padding-top: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.title__wrapper--secondary span:after {
+    content: "";
+    display: block;
+    width: 42px;
+    padding-top: 1rem;
+    border-bottom: 3px solid var(--color-secondary);
+}
+
+.title__wrapper--primary {
+    font-size: 3.5rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+}
+
+.text-secondary--custom {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.text-primary--custom {
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 470px) {
+    #mainNav img {
+        width: auto;
+        height: 1.5rem;
+    }
+    #btnToggleDropDown {
+        font-size: var(--font-size);
+        margin: 0.5rem;
+    }
+    .title__wrapper--primary {
+        font-size: 2.5rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+    }
+    .text-secondary--custom {
+        font-size: 1.15rem;
+        font-weight: 700;
+    }
+    .text-primary--custom {
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #mainNav img {
+        width: auto;
+        height: 1.5rem;
+    }
+    #btnToggleDropDown {
+        font-size: var(--font-size);
+        margin: 0.5rem;
+    }
+    .text-secondary--custom {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .text-primary--custom {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    #socialLink,
+    #accountLink a {
+        font-size: 0.75rem;
+    }
+    .title__wrapper--primary {
+        font-size: 1.75rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+    }
+    .text-secondary--custom {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .text-primary--custom {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
