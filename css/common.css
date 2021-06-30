@@ -1,45 +1,49 @@
 .bg-darkblue {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary)!important;
 }
 
 .bg-blue--custom {
-    background-color: #092e56;
+    background-color: #092e56!important;
 }
 
 .bg-yellow {
-    background-color: var(--color-secondary);
+    background-color: var(--color-secondary)!important;
 }
 
 .bg-lightpink {
-    background-color: #FF6F6F;
+    background-color: #FF6F6F !important;
 }
 
 .bg-pink {
-    background-color: #f6316f;
+    background-color: #f6316f!important;
 }
 
 .bg-green {
-    background-color: #009688;
+    background-color: #009688!important;
 }
 
 .bg-yellowgreen {
-    background-color: #B5D56A;
+    background-color: #B5D56A!important;
 }
 
 .bg-lightblue {
-    background-color: #4886FF;
+    background-color: #4886FF!important;
+}
+
+.text-darkblue {
+    color: #092e56!important;
 }
 
 .text-blue {
-    color: var(--color-primary);
+    color: var(--color-primary)!important;
 }
 
 .text-yellow {
-    color: var(--color-secondary);
+    color: var(--color-secondary)!important;
 }
 
 .text-gray {
-    color: #b6b6b6;
+    color: #b6b6b6!important;
 }
 
 .sticky-top--custom {
@@ -60,19 +64,19 @@
 }
 
 .btn-orange {
-    color: var(--color-primary);
-    background-color: var(--color-secondary);
+    color: var(--color-primary)!important;
+    background-color: var(--color-secondary)!important;
 }
 
 .btn-white--custom {
-    color: var(--color-primary);
-    background-color: white;
+    color: var(--color-primary)!important;
+    background-color: white!important;
 }
 
 .btn--custom:hover {
-    background-color: var(--color-primary);
-    color: white;
-    transition-duration: var(--transition-duration-time);
+    background-color: var(--color-primary) !important;
+    color: white !important;
+    transition-duration: var(--transition-duration-time) !important;
 }
 
 .overlay {
@@ -87,9 +91,14 @@
 }
 
 .darkblue__overlay {
-    background: linear-gradient(#07294d5b, rgba(0, 0, 0, 0.5));
+    background: linear-gradient(#07294d5b, rgba(0, 0, 0, 0.5))!important;
+}
+
+.blue__overlay {
+    background-color: #07294d;
+    opacity: .9;
 }
 
 .smoke__overlay {
-    background-color: rgba(255, 255, 255, .95);
+    background-color: rgba(255, 255, 255, .95)!important;
 }

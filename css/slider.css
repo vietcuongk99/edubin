@@ -74,6 +74,14 @@
     border-radius: 10px;
 }
 
+.dot-yellow {
+    font-size: 1rem;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    color: var(--color-secondary);
+}
+
 @media only screen and (max-width: 992px) {
     #optionSectionTitle {
         font-size: 2rem;
