@@ -7,8 +7,8 @@
 }
 
 .card__wrapper--teacher {
-    margin-bottom: 2rem;
-    margin-right: 2rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 .card__image--teacher {
@@ -84,5 +84,11 @@
     }
     .card__wrapper--book {
         padding: 1rem 1.5rem;
+    }
+    .card__wrapper--teacher {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
     }
 }
