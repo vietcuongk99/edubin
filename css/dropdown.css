@@ -42,7 +42,7 @@
     margin: 0.5rem;
 }
 
-#mainNavContent .dropdown--custom:hover .dropdown__content {
+#mainNavContent .dropdown__wrapper:hover .dropdown__content {
     display: block;
 }
 

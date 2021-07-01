@@ -34,6 +34,10 @@
 }
 
 .card__sociallink--teacher i {
+    display: none;
+}
+
+.card__sociallink--teacher i {
     padding: 0.5rem;
     cursor: pointer;
 }
@@ -41,6 +45,22 @@
 .card__sociallink--teacher i:hover {
     color: var(--color-secondary);
     transition-duration: var(--transition-duration-time);
+}
+
+.card__wrapper--book {
+    padding: 2rem 2.5rem;
+}
+
+.card__image--news {
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    object-fit: cover;
+    transition: all .5s ease;
+}
+
+.card__image--news img {
+    max-width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -54,14 +74,3 @@
         font-size: 0.75rem;
     }
 }
-
-
-/* @media only screen and (max-width: 992px) {
-    .card__image--teacher {
-        width: 100%;
-        height: 20rem !important;
-        background-position: 10rem !important;
-        background-repeat: no-repeat !important;
-        background-size: inherit !important;
-    }
-} */

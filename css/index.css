@@ -116,7 +116,7 @@ body {
     border-bottom: 3px solid;
 }
 
-.title__wrapper--secondary.border-yellow span:after {
+.title__wrapper--secondary.yellowline--horizontal span:after {
     border-color: var(--color-secondary);
 }
 
@@ -154,7 +154,6 @@ body {
 }
 
 #btnCloseVideo {
-    font-size: 2rem;
     font-weight: 600;
     cursor: pointer;
     padding: 0;
@@ -163,6 +162,13 @@ body {
 
 #reviewSection {
     background-image: url("../content/image_icon/slider123.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bookStoreSection {
+    background-image: url("../content/image_icon/featured_courses_background.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -181,6 +187,45 @@ body {
 }
 
 .quote-icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#logoSection {
+    background-image: url("../content/image_icon/featured_courses_background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#primaryFooter {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#secondaryFooter {
+    padding: 2rem;
+}
+
+.whiteline--vertical:after {
+    content: "";
+    display: inline;
+    font-size: 0.75rem;
+    margin: 0 1rem;
+    border-left: 2px solid;
+}
+
+.icon__wrapper--circle {
+    position: relative;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+}
+
+.icon__wrapper--circle i {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -225,9 +270,16 @@ body {
         font-size: 1.75rem;
         font-weight: 700;
     }
+    #secondaryFooter {
+        font-size: 0.75rem;
+    }
+    .whiteline--vertical:after {
+        font-size: 0.5rem;
+        margin: 0 0.5rem;
+    }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 360px) {
     #mainNav img {
         width: auto;
         height: 1.5rem;

@@ -1,7 +1,8 @@
 let collapseDropdown = $('#collapseDropdown'),
     btnToggleDropDown = $('#btnToggleDropDown'),
     mainNav = $('#mainNav'),
-    sticky = mainNav.offset().top;
+    wrapperMoveToTop = $('#wrapperMoveToTop'),
+    sticky = $('#topBar').offset().top;
 
 $(document).ready(function() {
     initEvent();
@@ -13,21 +14,29 @@ function initEvent() {
         collapseDropdown.toggleClass('d-none');
     });
 
+    wrapperMoveToTop.on("click", moveToTop);
+
     $('.card__content--teacher').hover((event) => {
         let eventTarget = $(event.target);
-        eventTarget.find('.card__sociallink--teacher').removeClass('d-none');
+        eventTarget.find('.card__sociallink--teacher').show();
     }, (event) => {
         let eventTarget = $(event.target);
-        eventTarget.find('.card__sociallink--teacher').addClass('d-none');
+        eventTarget.find('.card__sociallink--teacher').hide();
     })
 }
 
 function onScroll() {
     if ($(window).scrollTop() >= sticky) {
         mainNav.addClass("sticky-top--custom");
+        wrapperMoveToTop.show();
     } else {
         mainNav.removeClass("sticky-top--custom");
+        wrapperMoveToTop.hide();
     }
+}
+
+function moveToTop() {
+    $(window).scrollTop(0);
 }
 
 $('#optionSlider').slick({
@@ -134,6 +143,39 @@ $('#reviewContent').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
+            }
+        },
+    ],
+});
+$('#logoSectionContent').slick({
+    dots: false,
+    infinite: true,
+    arrow: false,
+    autoplay: true,
+    prevArrow: null,
+    nextArrow: null,
+    speed: 200,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [{
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
             }
         },
     ],

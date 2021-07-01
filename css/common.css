@@ -6,6 +6,10 @@
     background-color: #092e56!important;
 }
 
+.bg-blackblue {
+    background-color: #021d3a!important;
+}
+
 .bg-yellow {
     background-color: var(--color-secondary)!important;
 }
@@ -20,6 +24,10 @@
 
 .bg-green {
     background-color: #009688!important;
+}
+
+.bg-whiteblue {
+    background-color: #dae0e6;
 }
 
 .bg-yellowgreen {
@@ -90,7 +98,7 @@
     content: '';
 }
 
-.darkblue__overlay {
+.lightblue__overlay {
     background: linear-gradient(#07294d5b, rgba(0, 0, 0, 0.5))!important;
 }
 
@@ -99,6 +107,15 @@
     opacity: .9;
 }
 
+.darkblue__overlay {
+    background: rgba(0, 33, 71, .8);
+}
+
 .smoke__overlay {
     background-color: rgba(255, 255, 255, .95)!important;
+}
+
+.icon--lighter {
+    font-weight: lighter;
+    font-size: 0.8rem;
 }

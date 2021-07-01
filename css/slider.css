@@ -105,6 +105,13 @@
     }
 }
 
+@media only screen and (max-width: 576px) {
+    #logoSectionContent img {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     .carousel-item__content p:first-child {
         font-size: 1.5rem;
