@@ -19,7 +19,7 @@
 
 .card__content--teacher {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.75rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,9 +33,10 @@
     background-color: white;
 }
 
-.card__sociallink--teacher i {
+
+/* .card__sociallink--teacher {
     display: none;
-}
+} */
 
 .card__sociallink--teacher i {
     padding: 0.5rem;
@@ -72,5 +73,16 @@
     }
     .card__wrapper--courses span {
         font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 578px) {
+    #bookStoreContent .card {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card__wrapper--book {
+        padding: 1rem 1.5rem;
     }
 }
