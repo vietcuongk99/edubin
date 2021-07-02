@@ -1,0 +1,80 @@
+:root {
+    --font-size: 16px;
+    --color-primary: #07294d;
+    --color-secondary: #ffc600;
+    --transition-duration-time: 200ms;
+    --font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+#topBar {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+#btnToggleDropDown {
+    font-size: calc(1.5 * var(--font-size));
+    padding: 0;
+    margin: 1.5rem;
+}
+
+#socialLink a {
+    color: #fff;
+}
+
+#socialLink a:hover {
+    color: var(--color-secondary);
+    transition-duration: var(--transition-duration-time);
+}
+
+#accountLink a {
+    color: var(--color-secondary);
+    font-size: 14px;
+}
+
+#accountLink a:hover {
+    color: #fff;
+    transition-duration: var(--transition-duration-time);
+}
+
+#mailLink {
+    color: #fff;
+}
+
+#mailLink:hover {
+    color: var(--color-secondary);
+    transition-duration: var(--transition-duration-time);
+}
+
+#mainNav img {
+    width: auto;
+    height: 3rem;
+}
+
+@media only screen and (max-width: 360px) {
+    #mainNav img {
+        width: auto;
+        height: 1.5rem;
+    }
+    #btnToggleDropDown {
+        font-size: var(--font-size);
+        margin: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    #socialLink,
+    #accountLink a {
+        font-size: 0.75rem;
+    }
+}

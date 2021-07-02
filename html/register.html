@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edubin</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/slider.css">
+    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../css/utils.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../lib/fontawesome-free-5.15.3-web/css/all.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../lib/bootstrap/node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <!-- slick js -->
+    <link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../lib/slick/slick.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- top section -->
+    <header class="sticky-top">
+        <!-- top bar -->
+        <div id="topBar" class="container-fluid">
+            <div class="container-xl d-flex justify-content-center justify-content-md-between align-items-center p-1">
+                <div class=" d-none d-md-flex justify-content-center align-items-center">
+                    <i class="far fa-envelope p-1"></i>
+                    <a id="mailLink" href="#" class="mr-2 text-decoration-none">info@yoursite.com</a>
+                    <i class="fas fa-phone-alt p-1"></i>
+                    <span>123-456-7890</span>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="p-2 d-none d-md-block">
+                        <span>Follow Us:</span>
+                    </div>
+                    <div id="socialLink" class="d-flex justify-content-center align-items-center">
+                        <div class="p-2">
+                            <a href="facebook.com">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div class="p-2">
+                            <a href="twitter.com">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <div class="p-2">
+                            <a href="youtube.com">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                        <div class="p-2">
+                            <a href="instagram.com">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="accountLink" class="list-unstyled mx-2">
+                        <li class="breadcrumb-item d-inline-block"><a href="#" class="text-decoration-none">Login</a></li>
+                        <li class="breadcrumb-item d-inline-block" aria-current="page"><a href="#" class="text-decoration-none">Register</a></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main navigator bar -->
+        <div id="mainNav">
+            <div class="container-fluid d-flex bg-white shadow">
+                <div class="container-fluid container-xl px-0">
+                    <nav class="navbar bg-white navbar-expand-lg px-1 justify-content-between">
+                        <a class="navbar-brand" href="../html/index.html">
+                            <img src="../content/image_icon/logo.png" width="175" height="48" alt="">
+                        </a>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="d-none d-lg-block m-3">
+                                <div id="mainNavContent" class="d-flex">
+                                    <div class="dropdown--custom">
+                                        <div class="dropdown__wrapper d-flex align-items-center">
+                                            <span>Home</span><i class="fas fa-chevron-down"></i>
+                                            <div class="dropdown__content dropdown__content--lg">
+                                                <div>All home demos</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown--custom">
+                                        <div class="dropdown__wrapper d-flex align-items-center">
+                                            <span>Courses</span><i class="fas fa-chevron-down"></i>
+                                            <div class="dropdown__content dropdown__content--lg">
+                                                <div>All home demos</div>
+                                                <div>All home demos</div>
+                                                <div>All home demos</div>
+                                                <div>All home demos</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown--custom">
+                                        <div class="dropdown__wrapper d-flex align-items-center">
+                                            <span>Pages</span><i class="fas fa-chevron-down"></i>
+                                            <div class="dropdown__content dropdown__content--lg">
+                                                <div>All home demos</div>
+                                                <div>All home demos</div>
+                                                <div>All home demos</div>
+                                                <div>All home demos</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown--custom">
+                                        <div class="dropdown__wrapper d-flex align-items-center">
+                                            <span>Events</span><i class="fas fa-chevron-down"></i>
+                                            <div class="dropdown__content dropdown__content--lg">
+                                                <div>All home demos</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown--custom">
+                                        <div class="dropdown__wrapper d-flex align-items-center">
+                                            <span>Blog</span><i class="fas fa-chevron-down"></i>
+                                            <div class="dropdown__content dropdown__content--lg">
+                                                <div>All home demos</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown--custom">
+                                        <div class="dropdown__wrapper d-flex align-items-center">
+                                            <span>Shop</span><i class="fas fa-chevron-down"></i>
+                                            <div class="dropdown__content dropdown__content--lg">
+                                                <div>All home demos</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center">
+                                            <span>Contact</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="btnToggleDropDown" class="navbar-toggler d-lg-none border-0" type="button">
+                                <i class="fas fa-bars text-darkblue"></i>
+                            </button>
+                            <i class="fas fa-search m-1"></i>
+                            <i class="fas fa-shopping-cart m-1"></i>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- dropdown for mobile screen -->
+            <div id="collapseDropdown" class="d-none d-lg-none dropdown--custom">
+                <div class="container-fluid dropdown__content">
+                    <div class="p-2">
+                        <div class="dropdown__item--collapse">
+                            <span>Home</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="dropdown__item--collapse">
+                            <span>Courses</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="dropdown__item--collapse">
+                            <span>Pages</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="dropdown__item--collapse">
+                            <span>Events</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="dropdown__item--collapse">
+                            <span>Blog</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="dropdown__item--collapse">
+                            <span>Shop</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="dropdown__item--collapse">
+                            <span>Contact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <div id="fullWidthBanner" class="container-fluid px-0 py-5 position-relative text-white">
+            <div class="overlay blue__overlay"></div>
+            <div class="container position-relative">
+                <div class="title__wrapper--primary pb-5">
+                    <span>Student Registration</span>
+                </div>
+                <div class="breadcrumb bg-transparent p-0">
+                    <div class="breadcrumb-item">Home</div>
+                    <div class="breadcrumb-item">Student Registration</div>
+                </div>
+            </div>
+        </div>
+        <div id="formContent" class="container-fluid px-0 py-5 bg-whiteblue">
+            <div class="container-lg bg-white rounded">
+                <div class="d-flex w-100 justify-content-center flex-column">
+                    <div>
+                        <div class="row row-cols-1 row-cols-sm-2">
+                            <div class="col py-2">
+                                <div class="d-flex flex-column">
+                                    <label for="firstName" class="text-darkblue font-weight-bold">First Name</label>
+                                    <input type="text" placeholder="First Name" id="firstName" tabindex="-1">
+                                    <div id="firstNameValidate"></div>
+                                </div>
+                            </div>
+                            <div class="col py-2">
+                                <div class="d-flex flex-column">
+                                    <label for="lastName" class="text-darkblue font-weight-bold">Last Name</label>
+                                    <input type="text" placeholder="Last Name" id="lastName" tabindex="-1">
+                                    <div id="lastNameValidate"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-cols-1 row-cols-sm-2">
+                            <div class="col py-2">
+                                <div class="d-flex flex-column">
+                                    <label for="userName" class="text-darkblue font-weight-bold">User Name</label>
+                                    <input type="text" placeholder="User Name" id="userName" tabindex="-1">
+                                    <div id="userNameValidate"></div>
+                                </div>
+                            </div>
+                            <div class="col py-2">
+                                <div class="d-flex flex-column">
+                                    <label for="email" class="text-darkblue font-weight-bold">E-Mail</label>
+                                    <input type="email" placeholder="E-Mail" id="email" tabindex="-1">
+                                    <div id="emailValidate"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-cols-1 row-cols-sm-2">
+                            <div class="col py-2">
+                                <div class="d-flex flex-column">
+                                    <label for="password" class="text-darkblue font-weight-bold">Password</label>
+                                    <input type="password" placeholder="Password" id="password" tabindex="-1">
+                                    <div id="passwordValidate"></div>
+                                </div>
+                            </div>
+                            <div class="col py-2">
+                                <div class="d-flex flex-column">
+                                    <label for="rePassword" class="text-darkblue font-weight-bold">Password confirmation</label>
+                                    <input type="password" placeholder="Password Confirmation" id="rePassword" tabindex="-1">
+                                    <div id="rePasswordValidate"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="btnSubmit" type="submit" class="btn--custom align-self-end">Submit</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="btnMoveToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <!-- footer section -->
+    <footer class="text-white">
+        <div id="primaryFooter" class="bg-blue--custom container-fluid">
+            <div class="container-lg px-0">
+                <div class="row row-cols-md-2 px-0">
+                    <div class="col-lg-4">
+                        <img src="../content/image_icon/white-logo.png" alt="" width="175" height="50" class="text-white">
+                        <div class="py-3">
+                            <p>Edubin perfect for online courses and other institutes. It’s a complete solution with lms features and functionalities.
+                            </p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="icon__wrapper--circle bg-blackblue">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="icon__wrapper--circle bg-blackblue">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="icon__wrapper--circle bg-blackblue">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <div class="icon__wrapper--circle bg-blackblue">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- features link -->
+                    <div class="col-lg-3 mt-5">
+                        <h5 class="font-weight-bold pb-4">Features Links</h5>
+                        <div class="row w-100">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>About Us</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Graduation</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Scholarship</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Contact</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Result</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Admissions</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>International</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Teachers</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Alumni</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Events</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- support -->
+                    <div class="col-lg-2 mt-5">
+                        <h5 class="font-weight-bold pb-4">Support</h5>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Language</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>WordPress</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Privacy</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>FAQs</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Support</span>
+                        </div>
+                    </div>
+                    <!-- contact us -->
+                    <div class="col-lg-3 mt-5">
+                        <h5 class="font-weight-bold pb-4">Contact Us</h5>
+                        <p class="mb-3">203, Envato Labs, Behind Alis Steet, Melbourne, Australia.</p>
+                        <div class="d-block">
+                            <i class="fas fa-phone-volume mr-2"></i><span>+1 23-4567-8920</span>
+                        </div>
+                        <div class="d-block">
+                            <i class="fas fa-envelope mr-2"></i><span>info@yourmail.com</span>
+                        </div>
+                        <div class="d-block">
+                            <i class="fas fa-globe-asia mr-2"></i><span>www.yourdomain.com0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="secondaryFooter" class="container-fluid bg-blackblue">
+            <div class="container-xl p-0 d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between">
+                <span>&#169;2021 Pixelcurve. All rights reserved.</span>
+                <div class="mt-3 mt-lg-0 d-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span class="whiteline--vertical">Language</span>
+                        <span class="whiteline--vertical">WordPress</span>
+                        <span class="whiteline--vertical">Privacy</span>
+                        <span class="whiteline--vertical">FAQs</span>
+                        <span>Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script src="../lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../lib/bootstrap/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../lib/bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/register.js "></script>
+</body>
+
+</html>

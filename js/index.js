@@ -2,11 +2,11 @@ let collapseDropdown = $('#collapseDropdown'),
     btnToggleDropDown = $('#btnToggleDropDown'),
     mainNav = $('#mainNav'),
     btnMoveToTop = $('#btnMoveToTop'),
-    sticky = $('#topBar').offset().top;
+    sticky = $('#mainNav').offset().top;
 
 $(document).ready(function() {
     addSlider();
-    getCourseData();
+    renderCoursesData();
     initEvent();
 });
 
@@ -28,7 +28,7 @@ function toggleTeacherLink(target) {
 }
 
 function onScroll() {
-    if ($(window).scrollTop() >= sticky) {
+    if ($(window).scrollTop() > sticky) {
         mainNav.addClass("sticky-top--custom");
         btnMoveToTop.show();
     } else {
@@ -41,7 +41,7 @@ function moveToTop() {
     $(window).scrollTop(0);
 }
 
-function getCourseData() {
+function renderCoursesData() {
     $.ajax({
         method: "GET",
         url: "https://60d4611a61160900173cb070.mockapi.io/courses",
@@ -55,7 +55,7 @@ function getCourseData() {
 
 function loadCourseData(data) {
     $('#courseSlider').empty();
-    for (course of data) {
+    data.map((course) => {
         let card = `<div class="card__wrapper--courses">
     <div class="card border-0 shadow">
         <div class="position-absolute w-100">
@@ -89,7 +89,7 @@ function loadCourseData(data) {
             </div>
         </div>
         <div class="d-flex justify-content-between align-items-center py-2 px-3 border-top">
-            <span class="text-darkblue font-weight-bold">Free</span>
+            <span class="text-darkblue font-weight-bold">${(course.price == 0) ? "Free" : course.price + "$" }</span>
             <div>
                 <i class="fas fa-shopping-cart text-yellow"></i>
                 <span class="text-gray font-weight-bold">Add to Cart</span>
@@ -98,7 +98,7 @@ function loadCourseData(data) {
     </div>
 </div>`;
         $('#courseSlider').append(card);
-    };
+    });
     $('#courseSlider').slick({
         prevArrow: $('#prevArrow'),
         nextArrow: $('#nextArrow'),

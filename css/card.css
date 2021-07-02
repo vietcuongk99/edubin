@@ -3,7 +3,7 @@
     height: auto;
     /* margin-left: 2rem;
     margin-right: 2rem; */
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .card__wrapper--teacher {
@@ -68,11 +68,17 @@
     .card__wrapper--courses {
         margin: 1rem;
     }
-    .card__wrapper--courses i {
+    .card__wrapper--courses {
         font-size: 0.75rem;
     }
     .card__wrapper--courses span {
         font-size: 0.75rem;
+    }
+    .card__wrapper--courses i {
+        font-size: 0.75rem;
+    }
+    .card__wrapper--courses h5 {
+        font-size: 1rem;
     }
 }
 
