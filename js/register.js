@@ -3,7 +3,7 @@ const collapseDropdown = $('#collapseDropdown'),
     mainNav = $('#mainNav'),
     btnMoveToTop = $('#btnMoveToTop'),
     btnSubmit = $('#btnSubmit'),
-    nameRegex = /^[A-Za-z]{2,20}/,
+    nameRegex = /^[A-Za-z]{8,}/,
     emailRegex = /^[^\s@]+@[^\s@]+$/,
     passwordRegex = /[a-z]{6,20}/;
 
@@ -70,12 +70,12 @@ function nameValidate(name) {
             name.next().html(result);
         } else {
             let result = $(`<div class="invalid-input"></div>`);
-            result.html("Tên chứa tối thiểu 2 chữ cái.");
+            result.html("Tên chứa tối thiểu 8 chữ cái.");
             name.next().html(result);
         }
     } else {
         let result = $(`<div class="invalid-input"></div>`);
-        result.html("Tên chứa tối thiểu 2 chữ cái.");
+        result.html("Tên chứa tối thiểu 8 chữ cái.");
         name.next().html(result);
     }
 }
@@ -120,14 +120,16 @@ function passwordValidate(password) {
 
 
 function rePasswordValidate(rePassword) {
-    if (rePassword.val() && rePassword.val().trim() == password.val().trim()) {
-        let result = $(`<div class="valid-input"></div>`);
-        result.html("Mật khẩu nhập lại hợp lệ.");
-        rePassword.next().html(result);
-    } else {
-        let result = $(`<div class="invalid-input"></div>`);
-        result.html("Mật khẩu nhập lại chưa trùng khớp.");
-        rePassword.next().html(result);
+    if (password.val() && passwordRegex.test(password.val().trim())) {
+        if (rePassword.val() && rePassword.val().trim() == password.val().trim()) {
+            let result = $(`<div class="valid-input"></div>`);
+            result.html("Mật khẩu nhập lại hợp lệ.");
+            rePassword.next().html(result);
+        } else {
+            let result = $(`<div class="invalid-input"></div>`);
+            result.html("Mật khẩu nhập lại chưa trùng khớp.");
+            rePassword.next().html(result);
+        }
     }
 }
 
