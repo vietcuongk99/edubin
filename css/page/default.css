@@ -67,6 +67,10 @@ body {
     padding-bottom: 3rem;
 }
 
+#primaryFooter .icon__wrapper--circle {
+    margin-right: 0.5rem;
+}
+
 #secondaryFooter {
     padding: 2rem;
 }
