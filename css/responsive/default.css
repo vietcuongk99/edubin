@@ -1,0 +1,69 @@
+@media only screen and (max-width: 470px) {
+    #mainNav img {
+        width: auto;
+        height: 1.5rem;
+    }
+    #btnToggleDropDown {
+        font-size: var(--font-size);
+        margin: 0.5rem;
+    }
+    .title__wrapper--primary {
+        font-size: 2.5rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+    }
+    .text-secondary--custom {
+        font-size: 1.15rem;
+        font-weight: 700;
+    }
+    .text-primary--custom {
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+    #secondaryFooter {
+        font-size: 0.75rem;
+    }
+    .whiteline--vertical:after {
+        font-size: 0.5rem;
+        margin: 0 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #mainNav img {
+        width: auto;
+        height: 1.5rem;
+    }
+    #btnToggleDropDown {
+        font-size: var(--font-size);
+        margin: 0.5rem;
+    }
+    .text-secondary--custom {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .text-primary--custom {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    #socialLink,
+    #accountLink a {
+        font-size: 0.75rem;
+    }
+    .title__wrapper--primary {
+        font-size: 1.75rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+    }
+    .text-secondary--custom {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .text-primary--custom {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,66 @@
+.card__wrapper--courses {
+    width: 22rem;
+    height: auto;
+    margin: 1rem;
+}
+
+.card__wrapper--teacher {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.card__image--teacher {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card__content--teacher {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.card__sociallink--teacher {
+    height: 0;
+    transition: height var(--transition-duration-time) ease-in-out;
+}
+
+.card__content--teacher>div:hover .card__sociallink--teacher {
+    height: 2rem;
+    display: block !important;
+}
+
+.card__detail--teacher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.card__sociallink--teacher i {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.card__sociallink--teacher i:hover {
+    color: var(--color-secondary);
+    transition-duration: var(--transition-duration-time);
+}
+
+.card__wrapper--book {
+    padding: 2rem 2.5rem;
+}
+
+.card__image--news {
+    height: 12rem;
+    object-fit: cover;
+}
+
+.card__image--news img {
+    max-width: 100%;
+}

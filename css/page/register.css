@@ -1,5 +1,5 @@
 #fullWidthBanner {
-    background-image: url("../content/image_icon/header.jpg");
+    background-image: url("../../content/image_icon/header.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,10 +54,4 @@
     color: var(--color-primary) !important;
     background-color: var(--color-secondary) !important;
     transition-duration: var(--transition-duration-time) !important;
-}
-
-@media only screen and (max-width: 768px) {
-    #formContent>div {
-        padding: 1rem;
-    }
 }

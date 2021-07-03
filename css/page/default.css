@@ -62,20 +62,11 @@ body {
     height: 3rem;
 }
 
-@media only screen and (max-width: 360px) {
-    #mainNav img {
-        width: auto;
-        height: 1.5rem;
-    }
-    #btnToggleDropDown {
-        font-size: var(--font-size);
-        margin: 0.5rem;
-    }
+#primaryFooter {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
-@media only screen and (max-width: 290px) {
-    #socialLink,
-    #accountLink a {
-        font-size: 0.75rem;
-    }
+#secondaryFooter {
+    padding: 2rem;
 }

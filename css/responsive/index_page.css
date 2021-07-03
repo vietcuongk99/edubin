@@ -1,0 +1,121 @@
+@media only screen and (max-width: 1200px) {
+    /* card */
+    .card__wrapper--courses {
+        font-size: 0.75rem;
+    }
+    .card__wrapper--courses span {
+        font-size: 0.75rem;
+    }
+    .card__wrapper--courses i {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* index page */
+    #optionSectionTitle {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .carousel-item__content {
+        top: 5%;
+    }
+    #optionSectionWrapper {
+        padding: 2rem;
+    }
+    /* card */
+    .card__wrapper--teacher {
+        margin-bottom: 2rem !important;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    /* index page */
+    #optionSectionTitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    #optionSectionWrapper {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* card */
+    .card__wrapper--courses {
+        margin: 1rem;
+    }
+    .card__wrapper--courses {
+        font-size: 0.75rem;
+    }
+    .card__wrapper--courses span {
+        font-size: 0.75rem;
+    }
+    .card__wrapper--courses i {
+        font-size: 0.75rem;
+    }
+    .card__wrapper--courses h5 {
+        font-size: 1rem;
+    }
+    /* index page */
+    #facilitySection {
+        background-position: center right;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+    #facilityVideo {
+        height: 40%;
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    #facilityContent {
+        height: calc(100% - 40%);
+    }
+}
+
+@media only screen and (max-width: 578px) {
+    /* index page */
+    #bookStoreContent .card {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #logoSectionContent img {
+        width: 6rem;
+        height: 6rem;
+    }
+    /* card */
+    .card__wrapper--book {
+        padding: 1rem 1.5rem;
+    }
+    .card__wrapper--teacher {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* index page */
+    .carousel-item__content p:first-child {
+        font-size: 1.5rem;
+    }
+    .carousel-item__content p:last-child {
+        font-size: 1rem;
+    }
+    .btn--custom {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+    }
+    /* slider */
+    .slider__content--custom {
+        width: 8rem;
+        height: 8rem;
+    }
+    .slider__content--custom img {
+        width: 4rem;
+        height: 4rem;
+    }
+}

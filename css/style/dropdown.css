@@ -76,9 +76,3 @@
     transition-duration: var(--transition-duration-time);
     color: var(--color-secondary);
 }
-
-
-/* .dropdown__custom>span:hover {
-    transition-duration: var(--transition-duration-time);
-    color: var(--color-secondary);
-} */

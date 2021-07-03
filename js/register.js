@@ -3,19 +3,19 @@ const collapseDropdown = $('#collapseDropdown'),
     mainNav = $('#mainNav'),
     btnMoveToTop = $('#btnMoveToTop'),
     btnSubmit = $('#btnSubmit'),
-    nameRegex = /^[A-Za-z]{8,}/,
-    emailRegex = /^[^\s@]+@[^\s@]+$/,
-    passwordRegex = /[a-z]{6,20}/;
-let validHTML = $(`<div class="valid-input"></div>`),
-    invalidHTML = $(`<div class="invalid-input"></div>`);
-let timeout = null;
-let sticky = $('#mainNav').offset().top,
     firstName = $('#firstName'),
     lastName = $('#lastName'),
     userName = $('#userName'),
     email = $('#email'),
     password = $('#password'),
     rePassword = $('#rePassword');
+const nameRegex = /^[A-Za-z]{8,}/,
+    emailRegex = /^[^\s@]+@[^\s@]+$/,
+    passwordRegex = /[a-z]{6,20}/;
+let validHTML = $(`<div class="valid-input"></div>`),
+    invalidHTML = $(`<div class="invalid-input"></div>`);
+let timeout = null,
+    sticky = $('#mainNav').offset().top;
 $(document).ready(function() {
     initEvent();
 });
@@ -29,8 +29,9 @@ function initEvent() {
     });
     //move to top
     btnMoveToTop.on("click", moveToTop);
+    //submit form
     btnSubmit.on("click", submitForm);
-    //validate input    
+    //input event
     onInput(firstName, nameValidate);
     onInput(lastName, nameValidate);
     onInput(userName, nameValidate);
