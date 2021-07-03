@@ -33,6 +33,13 @@
     background: url("../content/image_icon/featured_courses_background.png");
 }
 
+#prevArrow:hover,
+#nextArrow:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    transition-duration: var(--transition-duration-time);
+}
+
 .title__wrapper--secondary {
     height: 3.5rem;
 }
@@ -109,6 +116,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#bookStoreSection .card {
+    background-color: transparent;
 }
 
 #reviewSection .quote-icon {

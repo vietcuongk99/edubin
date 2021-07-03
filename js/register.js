@@ -6,12 +6,9 @@ const collapseDropdown = $('#collapseDropdown'),
     nameRegex = /^[A-Za-z]{8,}/,
     emailRegex = /^[^\s@]+@[^\s@]+$/,
     passwordRegex = /[a-z]{6,20}/;
-
 let validHTML = $(`<div class="valid-input"></div>`),
     invalidHTML = $(`<div class="invalid-input"></div>`);
-
 let timeout = null;
-
 let sticky = $('#mainNav').offset().top,
     firstName = $('#firstName'),
     lastName = $('#lastName'),
@@ -19,7 +16,6 @@ let sticky = $('#mainNav').offset().top,
     email = $('#email'),
     password = $('#password'),
     rePassword = $('#rePassword');
-
 $(document).ready(function() {
     initEvent();
 });
@@ -34,15 +30,13 @@ function initEvent() {
     //move to top
     btnMoveToTop.on("click", moveToTop);
     btnSubmit.on("click", submitForm);
-    //validate input
-    firstName.on("focus", onKeyUp(firstName, nameValidate));
-    lastName.on("focus", onKeyUp(lastName, nameValidate));
-    userName.on("focus", onKeyUp(userName, nameValidate));
-    email.on("focus", onKeyUp(email, emailValidate));
-    password.on("focus", onKeyUp(password, passwordValidate));
-    rePassword.on("focus", onKeyUp(rePassword, rePasswordValidate));
-
-
+    //validate input    
+    onInput(firstName, nameValidate);
+    onInput(lastName, nameValidate);
+    onInput(userName, nameValidate);
+    onInput(email, emailValidate);
+    onInput(password, passwordValidate);
+    onInput(rePassword, rePasswordValidate);
 }
 
 function onScroll() {
@@ -58,93 +52,82 @@ function onScroll() {
 function moveToTop() {
     $(window).scrollTop(0);
 }
-
-
 //validate input
 function nameValidate(name) {
-    if (name.val()) {
-        name.next().html = '';
+    let validResult = $(`<div class="valid-input"></div>`),
+        invalidResult = $(`<div class="invalid-input"></div>`);
+    if (name.val() && name.val().trim().length > 0) {
         if (nameRegex.test(name.val().trim())) {
-            let result = $(`<div class="valid-input"></div>`);
-            result.html("Tên hợp lệ.");
-            name.next().html(result);
+            validResult.html("Tên hợp lệ.");
+            name.next().html(validResult);
         } else {
-            let result = $(`<div class="invalid-input"></div>`);
-            result.html("Tên chứa tối thiểu 8 chữ cái.");
-            name.next().html(result);
+            invalidResult.html("Tên chứa tối thiểu 8 chữ cái.");
+            name.next().html(invalidResult);
         }
     } else {
-        let result = $(`<div class="invalid-input"></div>`);
-        result.html("Tên chứa tối thiểu 8 chữ cái.");
-        name.next().html(result);
+        invalidResult.html("Bạn cần nhập trường này.");
+        name.next().html(invalidResult);
     }
 }
 
 function emailValidate(email) {
+    let validResult = $(`<div class="valid-input"></div>`),
+        invalidResult = $(`<div class="invalid-input"></div>`);
     if (email.val()) {
         email.next().html = '';
         if (emailRegex.test(email.val().trim())) {
-            let result = $(`<div class="valid-input"></div>`);
-            result.html("Email hợp lệ.");
-            email.next().html(result);
+            validResult.html("Email hợp lệ.");
+            email.next().html(validResult);
         } else {
-            let result = $(`<div class="invalid-input"></div>`);
-            result.html("Email chưa hợp lệ.");
-            email.next().html(result);
+            invalidResult.html("Email chưa hợp lệ.");
+            email.next().html(invalidResult);
         }
     } else {
-        let result = $(`<div class="invalid-input"></div>`);
-        result.html("Email chưa hợp lệ.");
-        email.next().html(result);
+        invalidResult.html("Bạn cần nhập trường này.");
+        email.next().html(invalidResult);
     }
 }
 
 function passwordValidate(password) {
+    let validResult = $(`<div class="valid-input"></div>`),
+        invalidResult = $(`<div class="invalid-input"></div>`);
     if (password.val()) {
         password.next().html = '';
         if (passwordRegex.test(password.val().trim())) {
-            let result = $(`<div class="valid-input"></div>`);
-            result.html("Mật khẩu hợp lệ");
-            password.next().html(result);
+            validResult.html("Mật khẩu hợp lệ");
+            password.next().html(validResult);
         } else {
-            let result = $(`<div class="invalid-input"></div>`);
-            result.html("Mật khẩu chứa 6-20 kí tự.");
-            password.next().html(result);
+            invalidResult.html("Mật khẩu chứa 6-20 kí tự.");
+            password.next().html(invalidResult);
         }
     } else {
-        let result = $(`<div class="invalid-input"></div>`);
-        result.html("Mật khẩu chứa 6-20 kí tự.");
-        password.next().html(result);
+        invalidResult.html("Bạn cần nhập trường này.");
+        password.next().html(invalidResult);
     }
 }
 
-
 function rePasswordValidate(rePassword) {
+    let validResult = $(`<div class="valid-input"></div>`),
+        invalidResult = $(`<div class="invalid-input"></div>`);
     if (password.val() && passwordRegex.test(password.val().trim())) {
         if (rePassword.val() && rePassword.val().trim() == password.val().trim()) {
-            let result = $(`<div class="valid-input"></div>`);
-            result.html("Mật khẩu nhập lại hợp lệ.");
-            rePassword.next().html(result);
+            validResult.html("Mật khẩu nhập lại hợp lệ.");
+            rePassword.next().html(validResult);
         } else {
-            let result = $(`<div class="invalid-input"></div>`);
-            result.html("Mật khẩu nhập lại chưa trùng khớp.");
-            rePassword.next().html(result);
+            invalidResult.html("Bạn cần nhập trường này.");
+            rePassword.next().html(invalidResult);
         }
     }
 }
 
-
-function onKeyUp(input, condition) {
-    input.on("keyup", () => {
+function onInput(input, condition) {
+    input.on("input", () => {
         clearTimeout(timeout);
         timeout = setTimeout(() => {
-            if (input && input.val()) {
-                condition(input);
-            }
-        }, 200)
+            condition(input);
+        }, 200);
     })
 }
-
 
 function submitForm() {
     nameValidate(firstName);

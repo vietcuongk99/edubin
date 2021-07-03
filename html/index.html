@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edubin</title>
     <!-- custom css -->
-    <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/default.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/dropdown.css">
@@ -23,6 +22,7 @@
     <!-- slick js -->
     <link rel="stylesheet" type="text/css" href="../lib/slick/slick-theme.css" />
     <link rel="stylesheet" type="text/css" href="../lib/slick/slick.css" />
+    <link rel="stylesheet" href="../css/slick-custom.css">
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -245,7 +245,7 @@
         <div id="optionSection" class="container-fluid my-0 py-0 text-white">
             <div class="container p-0">
                 <div id="optionSectionWrapper" class="row m-0 w-100 bg-darkblue">
-                    <div id="optionSectionTitle" class="col-sm col-lg-4 p-2">
+                    <div id="optionSectionTitle" class="col-sm col-lg-4 p-2 text-center">
                         <span>Best plaform to learn everything</span>
                     </div>
                     <div id="optionSlider" class="col-sm col-lg-7 offset-lg-1 p-2 d-flex align-items-center justify-content-center">
@@ -353,32 +353,34 @@
             </div>
         </div>
         <!-- apply information section -->
-        <div class="container p-0 my-5">
-            <div class="row w-100 m-0">
-                <div class="col-sm bg-darkblue text-white p-5 m-4 m-sm-0">
-                    <div class="d-block text-secondary--custom my-3">Apply for Fall 2021</div>
-                    <div class="d-block my-3">
-                        <p>Gravida nibh vel velit auctor aliquetn sollicitudirem sem quibibendum auci elit cons equat ipsutis sem nibh id elituis sed odio sit amet nibh vulputate cursus equat ipsutis.</p>
+        <div class="container-fluid p-0 my-5">
+            <div class="container">
+                <div class="row w-100 m-0">
+                    <div class="col-lg bg-darkblue text-white px-5 py-3 py-md-5 m-sm-0">
+                        <div class="d-block text-secondary--custom my-3">Apply for Fall 2021</div>
+                        <div class="d-block my-3">
+                            <p>Gravida nibh vel velit auctor aliquetn sollicitudirem sem quibibendum auci elit cons equat ipsutis sem nibh id elituis sed odio sit amet nibh vulputate cursus equat ipsutis.</p>
+                        </div>
+                        <div class="my-2">
+                            <button class="btn--custom btn-orange">Apply Now</button>
+                        </div>
                     </div>
-                    <div class="my-2">
-                        <button class="btn--custom btn-orange">Apply Now</button>
-                    </div>
-                </div>
-                <div class="col-sm bg-blue--custom text-white p-5 m-4 m-sm-0">
-                    <div class="d-block text-secondary--custom my-3">Apply for Scholarship</div>
-                    <div class="d-block my-3">
-                        <p>Sollicitudirem sem quibibendum auci elit cons equat ipsutis sem nibh id elituis sed odio sit amet nibh vulputate cursus equat ipsutis gravida nibh vel velit auctor aliquetn.
-                        </p>
-                    </div>
-                    <div class="my-3">
-                        <button class="btn--custom btn-orange">Apply Now</button>
+                    <div class="col-lg bg-blue--custom text-white px-5 py-3 py-md-5 m-sm-0">
+                        <div class="d-block text-secondary--custom my-3">Apply for Scholarship</div>
+                        <div class="d-block my-3">
+                            <p>Sollicitudirem sem quibibendum auci elit cons equat ipsutis sem nibh id elituis sed odio sit amet nibh vulputate cursus equat ipsutis gravida nibh vel velit auctor aliquetn.
+                            </p>
+                        </div>
+                        <div class="my-3">
+                            <button class="btn--custom btn-orange">Apply Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- courses section -->
-        <div id="courseSection" class="container-fluid mb-5">
-            <div class="container p-0">
+        <div id="courseSection" class="container-fluid p-0 mb-5">
+            <div class="container">
                 <div class="title__wrapper--secondary text-darkblue yellowline--horizontal ">
                     <span>Our Courses</span>
                 </div>
@@ -457,7 +459,7 @@
         <!-- teachers section -->
         <div class="container pb-5">
             <div class="row">
-                <div class="col-lg">
+                <div class="col-lg pb-5 pb-lg-0">
                     <div class="title__wrapper--secondary text-darkblue yellowline--horizontal ">
                         <span>Teachers</span>
                     </div>
@@ -485,7 +487,7 @@
                                         <div class="card__detail--teacher rounded flex-column">
                                             <span class="text-darkblue font-weight-bold">Darmian Green</span>
                                             <span class="text-gray">Chairman</span>
-                                            <div class="text-darkblue card__sociallink--teacher d-none">
+                                            <div class="text-darkblue card__sociallink--teacher">
                                                 <i class="fab fa-facebook-f"></i>
                                                 <i class="fab fa-instagram"></i>
                                                 <i class="fab fa-twitter"></i>
@@ -504,7 +506,7 @@
                                         <div class="card__detail--teacher rounded flex-column">
                                             <span class="text-darkblue font-weight-bold">Rebeak Alig</span>
                                             <span class="text-gray">Art Teacher</span>
-                                            <div class="text-darkblue card__sociallink--teacher d-none">
+                                            <div class="text-darkblue card__sociallink--teacher">
                                                 <i class="fab fa-facebook-f"></i>
                                                 <i class="fab fa-instagram"></i>
                                                 <i class="fab fa-twitter"></i>
@@ -523,7 +525,7 @@
                                         <div class="card__detail--teacher rounded flex-column">
                                             <span class="text-darkblue font-weight-bold">Hanna Ben</span>
                                             <span class="text-gray">Teacher</span>
-                                            <div class="text-darkblue card__sociallink--teacher d-none">
+                                            <div class="text-darkblue card__sociallink--teacher">
                                                 <i class="fab fa-facebook-f"></i>
                                                 <i class="fab fa-instagram"></i>
                                                 <i class="fab fa-twitter"></i>
@@ -542,7 +544,7 @@
                                         <div class="card__detail--teacher rounded flex-column">
                                             <span class="text-darkblue font-weight-bold">Mark Alen</span>
                                             <span class="text-gray">Teacher</span>
-                                            <div class="text-darkblue card__sociallink--teacher d-none">
+                                            <div class="text-darkblue card__sociallink--teacher">
                                                 <i class="fab fa-facebook-f"></i>
                                                 <i class="fab fa-instagram"></i>
                                                 <i class="fab fa-twitter"></i>
@@ -624,7 +626,7 @@
                         <div class="title__wrapper--secondary text-darkblue yellowline--horizontal">
                             <span>Book Store</span>
                         </div>
-                        <div class="title__wrapper--primary pb-5">
+                        <div class="title__wrapper--primary pb-4">
                             <span>Publications</span>
                         </div>
                     </div>
@@ -632,7 +634,7 @@
                         <button class="btn--custom btn-orange">All Products</button>
                     </div>
                 </div>
-                <div id="bookStoreContent" class="row row-cols-4">
+                <div id="bookStoreContent" class="row row-cols-4 mt-4">
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="card border-0 rounded-0">
                             <div class="card__wrapper--book bg-whiteblue">
@@ -657,7 +659,10 @@
                     </div>
                     <div class="col-12 col-sm-6 col-lg-3 p-xs-5">
                         <div class="card border-0 rounded-0">
-                            <div class="card__wrapper--book bg-whiteblue">
+                            <div class="card__wrapper--book bg-whiteblue position-relative">
+                                <div class="d-flex align-items-center justify-content-center">
+
+                                </div>
                                 <img src="../content/image_icon/book4.jpg" class="card-img-top" alt="...">
                             </div>
                             <div class="card-body text-center">
@@ -692,7 +697,7 @@
                 <div id="newsContent" class="row">
                     <div class="col-lg-4">
                         <div class="card border-0 rounded-0">
-                            <img src="../content/image_icon/news_image_2.jpg" class="card-img-top" alt="...">
+                            <img src="../content/image_icon/news_image_1.jpeg" class="card-img-top card__image--news" alt="...">
                             <div class="card-body px-0">
                                 <div class="d-flex align-items-center">
                                     <i class="far fa-calendar-alt mr-1 text-yellow"></i><span class="text-gray mr-3">17 JULY 2019</span>
@@ -705,7 +710,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card border-0 rounded-0">
-                            <img src="../content/image_icon/news_image_3.jpeg" class="card-img-top" alt="...">
+                            <img src="../content/image_icon/news_image_3.jpeg" class="card-img-top card__image--news" alt="...">
                             <div class="card-body px-0">
                                 <div class="d-flex align-items-center">
                                     <i class="far fa-calendar-alt mr-1 text-yellow"></i><span class="text-gray mr-3">17 JULY 2019</span>
@@ -718,7 +723,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card border-0 rounded-0">
-                            <img src="../content/image_icon/news_image_2.jpg" class="card-img-top" alt="...">
+                            <img src="../content/image_icon/news_image_2.jpg" class="card-img-top card__image--news" alt="...">
                             <div class="card-body px-0">
                                 <div class="d-flex align-items-center">
                                     <i class="far fa-calendar-alt mr-1 text-yellow"></i><span class="text-gray mr-3">17 JULY 2019</span>
@@ -783,7 +788,7 @@
                         </div>
                     </div>
                     <!-- features link -->
-                    <div class="col-lg-3 mt-5">
+                    <div class="col-lg-3 mt-5 mt-md-0">
                         <h5 class="font-weight-bold pb-4">Features Links</h5>
                         <div class="row w-100">
                             <div class="col-6">
@@ -823,7 +828,7 @@
                         </div>
                     </div>
                     <!-- support -->
-                    <div class="col-lg-2 mt-5">
+                    <div class="col-lg-2 mt-5 mt-lg-0">
                         <h5 class="font-weight-bold pb-4">Support</h5>
                         <div class="d-flex align-items-center mb-2">
                             <i class="fas fa-chevron-right text-yellow icon--lighter mr-2"></i><span>Language</span>
@@ -842,7 +847,7 @@
                         </div>
                     </div>
                     <!-- contact us -->
-                    <div class="col-lg-3 mt-5">
+                    <div class="col-lg-3 mt-5 mt-lg-0">
                         <h5 class="font-weight-bold pb-4">Contact Us</h5>
                         <p class="mb-3">203, Envato Labs, Behind Alis Steet, Melbourne, Australia.</p>
                         <div class="d-block">

@@ -2,6 +2,7 @@ let collapseDropdown = $('#collapseDropdown'),
     btnToggleDropDown = $('#btnToggleDropDown'),
     mainNav = $('#mainNav'),
     btnMoveToTop = $('#btnMoveToTop'),
+    btnCloseVideo = $('#btnCloseVideo'),
     sticky = $('#mainNav').offset().top;
 
 $(document).ready(function() {
@@ -16,15 +17,8 @@ function initEvent() {
         collapseDropdown.toggleClass('d-none');
     });
     btnMoveToTop.on("click", moveToTop);
-    $('.card__content--teacher>div').hover((event) => {
-        toggleTeacherLink($(event.target));
-    }, (event) => {
-        toggleTeacherLink($(event.target));
-    });
-}
+    btnCloseVideo.on("click", stopVideo);
 
-function toggleTeacherLink(target) {
-    target.find('.card__sociallink--teacher').toggleClass("d-none");
 }
 
 function onScroll() {
@@ -41,6 +35,14 @@ function moveToTop() {
     $(window).scrollTop(0);
 }
 
+function stopVideo() {
+    let video = $('#videoModal iframe');
+    if (video) {
+        let src = video.attr('src');
+        video.attr('src', src);
+    }
+}
+
 function renderCoursesData() {
     $.ajax({
         method: "GET",
@@ -55,6 +57,7 @@ function renderCoursesData() {
 
 function loadCourseData(data) {
     $('#courseSlider').empty();
+    let starArr = [1, 2, 3, 4, 5];
     data.map((course) => {
         let card = `<div class="card__wrapper--courses">
     <div class="card border-0 shadow">
@@ -68,12 +71,12 @@ function loadCourseData(data) {
         </div>
         <img src="../content/image_icon/no-image.jpg" class="card-img-top" alt="...">
         <div class="card-body px-3">
-            <div class="d-flex align-items-center text-yellow">
-                <i class="fas fa-star mr-1"></i>
-                <i class="fas fa-star mr-1"></i>
-                <i class="fas fa-star mr-1"></i>
-                <i class="fas fa-star mr-1"></i>
-                <i class="fas fa-star mr-1"></i>    
+            <div class="d-flex align-items-center">
+                ${(starArr.map(
+                    (element, index) => 
+                    {if(element <= course.rate) 
+                        { return '<div class="fas fa-star text-yellow mr-1"></div>'} 
+                    else {return '<div class="far fa-star text-yellow mr-1"></div>'}}).join(''))}
                 <span class="text-darkblue font-weight-light ml-1">${course.rate.toFixed(2)} (${course.rate_quantity})</span>
             </div>
             <h5 class="card-title text-darkblue py-2 font-weight-bold">${course.name}</h5>
@@ -83,7 +86,7 @@ function loadCourseData(data) {
                 <i class="far fa-clock ml-2 mr-1"></i>
                 <span>${course.duration}</span>
             </div>
-            <div class="d-flex align-items-center text-gray py-2">
+            <div class="d-flex align-items-center text-gray pt-2">
                 <img src="../content/image_icon/default-teacher-avatar.png" alt="" width="30" height="30" class="rounded-circle">
                 <div class="ml-2">by <span class="text-darkblue">${course.teacher}</span> in <span class="text-darkblue">${course.categories}</span></div>
             </div>

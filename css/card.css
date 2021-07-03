@@ -19,11 +19,22 @@
 
 .card__content--teacher {
     position: absolute;
-    bottom: 1.75rem;
+    bottom: 1rem;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.card__sociallink--teacher {
+    height: 0;
+    transition: height var(--transition-duration-time) ease-in-out;
+}
+
+.card__content--teacher>div:hover .card__sociallink--teacher {
+    height: 2rem;
+    display: block !important;
 }
 
 .card__detail--teacher {
@@ -32,11 +43,6 @@
     justify-content: center;
     background-color: white;
 }
-
-
-/* .card__sociallink--teacher {
-    display: none;
-} */
 
 .card__sociallink--teacher i {
     padding: 0.5rem;
@@ -52,16 +58,43 @@
     padding: 2rem 2.5rem;
 }
 
+
+/* .card__wrapper--book .overlay {
+    height: 0 !important;
+}
+
+.card__wrapper--book:hover .overlay,
+.blue__overlay {
+    height: 100% !important;
+    transition-duration: 2s;
+} */
+
 .card__image--news {
-    width: 100%;
-    height: 15rem;
-    overflow: hidden;
+    height: 12rem;
     object-fit: cover;
-    transition: all .5s ease;
 }
 
 .card__image--news img {
     max-width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .card__wrapper--courses {
+        font-size: 0.75rem;
+    }
+    .card__wrapper--courses span {
+        font-size: 0.75rem;
+    }
+    .card__wrapper--courses i {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .card__wrapper--teacher {
+        margin-bottom: 2rem !important;
+        margin-right: 0;
+    }
 }
 
 @media only screen and (max-width: 768px) {
