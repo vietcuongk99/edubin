@@ -10,6 +10,7 @@
     border: none;
     background-color: var(--color-secondary);
     cursor: pointer;
+    z-index: 999999;
 }
 
 #btnMoveToTop i {

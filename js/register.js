@@ -75,7 +75,6 @@ function emailValidate(email) {
     let validResult = $(`<div class="valid-input"></div>`),
         invalidResult = $(`<div class="invalid-input"></div>`);
     if (email.val()) {
-        email.next().html = '';
         if (emailRegex.test(email.val().trim())) {
             validResult.html("Email hợp lệ.");
             email.next().html(validResult);
@@ -93,7 +92,6 @@ function passwordValidate(password) {
     let validResult = $(`<div class="valid-input"></div>`),
         invalidResult = $(`<div class="invalid-input"></div>`);
     if (password.val()) {
-        password.next().html = '';
         if (passwordRegex.test(password.val().trim())) {
             validResult.html("Mật khẩu hợp lệ");
             password.next().html(validResult);
@@ -111,13 +109,19 @@ function rePasswordValidate(rePassword) {
     let validResult = $(`<div class="valid-input"></div>`),
         invalidResult = $(`<div class="invalid-input"></div>`);
     if (password.val() && passwordRegex.test(password.val().trim())) {
-        if (rePassword.val() && rePassword.val().trim() == password.val().trim()) {
-            validResult.html("Mật khẩu nhập lại hợp lệ.");
-            rePassword.next().html(validResult);
+        if (rePassword.val()) {
+            if (rePassword.val().trim() == password.val().trim()) {
+                validResult.html("Mật khẩu nhập lại hợp lệ.");
+                rePassword.next().html(validResult);
+            } else {
+                invalidResult.html("Mật khẩu nhập lại chưa đúng.");
+                rePassword.next().html(invalidResult);
+            }
         } else {
             invalidResult.html("Bạn cần nhập trường này.");
             rePassword.next().html(invalidResult);
         }
+
     }
 }
 
