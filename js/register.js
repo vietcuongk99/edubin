@@ -11,7 +11,7 @@ const collapseDropdown = $('#collapseDropdown'),
     rePassword = $('#rePassword');
 const nameRegex = /^[A-Za-z]{8,}/,
     emailRegex = /^[^\s@]+@[^\s@]+$/,
-    passwordRegex = /[a-z]{6,20}/;
+    passwordRegex = /[a-z]{8,20}/;
 let validHTML = $(`<div class="valid-input"></div>`),
     invalidHTML = $(`<div class="invalid-input"></div>`);
 let timeout = null,
@@ -96,7 +96,7 @@ function passwordValidate(password) {
             validResult.html("Mật khẩu hợp lệ");
             password.next().html(validResult);
         } else {
-            invalidResult.html("Mật khẩu chứa 6-20 kí tự.");
+            invalidResult.html("Mật khẩu chứa 8-20 chữ cái thường.");
             password.next().html(invalidResult);
         }
     } else {
