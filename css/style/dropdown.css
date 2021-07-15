@@ -25,7 +25,6 @@
     z-index: 99;
     background-color: white;
     color: gray;
-    height: 25rem;
 }
 
 .dropdown__content--lg {
@@ -40,6 +39,7 @@
 }
 
 .dropdown__content--md {
+    height: 25rem;
     overflow-y: scroll;
     overflow-x: hidden;
 }
