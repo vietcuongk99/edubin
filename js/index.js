@@ -60,7 +60,7 @@ function loadCourseData(data) {
     let starArr = [1, 2, 3, 4, 5];
     data.map((course) => {
         let card = `<div class="card__wrapper--courses">
-    <div class="card border-0 shadow">
+    <div class="card border-0 ">
         <div class="position-absolute w-100">
             <div class="d-flex justify-content-between align-items-center py-2 px-3 border-top">
                 <span class="bg-darkblue p-1 rounded text-white">${course.level}</span>

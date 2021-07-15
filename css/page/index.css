@@ -32,7 +32,7 @@
 }
 
 #courseSection {
-    background: url("../../content/image_icon/featured_courses_background.png");
+    background: rgba(241, 241, 241, 0.53) url("../../content/image_icon/featured_courses_background.png");
 }
 
 #prevArrow:hover,
@@ -82,6 +82,12 @@
 
 #bookStoreSection .card {
     background-color: transparent;
+}
+
+#bookStoreContent .card:hover .overlay {
+    background-color: #07294d;
+    opacity: .9;
+    transition-duration: 0.5s;
 }
 
 #reviewSection .icon__wrapper--circle {
